@@ -18,7 +18,7 @@ class Markov:
         self.dic = None
         if not f is None:
             self.addfile(f)
-    
+
     def addfile(self,f):
         txt = open(f).read()
         self.add(txt)
