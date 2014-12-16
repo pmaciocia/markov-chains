@@ -1,6 +1,8 @@
+#!  /usr/bin/python
 from random import choice,uniform
 import re
 
+import sys
 
 def w_choice(l):
     t = float(sum(y for x,y in l.items()))
@@ -73,3 +75,9 @@ class Markov:
             txt += word + sep
 
         return txt
+
+if __name__ == '__main__':
+    if len(sys.argv) == 2:
+        m = Markov()
+        m.addfile(sys.argv[1])
+        print m.genline()
